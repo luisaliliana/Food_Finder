@@ -6,12 +6,12 @@ function getactivity (){
     $.getJSON('http://www.boredapi.com/api/activity?price=0.0', function(activity){
 
 
-        // console.log(activity)
+        console.log(activity)
 
-        function paintactivity(){
-            $(`<li class="activity">${activity}</li>`).appendTo('body')
-
-        }
+        $('.activity p').html(activity.activity)
+        $('.type p').html(activity.type)
+        $('.participants p').html(activity.participants)
+        $('.link a').html(activity.link)
     
             
     
